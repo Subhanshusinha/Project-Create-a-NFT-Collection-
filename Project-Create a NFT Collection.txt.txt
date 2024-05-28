@@ -1,0 +1,41 @@
+// Array to hold our NFTs objects
+ const myNFTs = [];
+
+// Function to create a new NFT
+function createNFT(name, eyeColor, shirtType, bling) {
+  const nft = {
+    name: name,                        //The name of the NFT
+    eyeColor: eyeColor,                //The eye color of the NFT
+    shirtType: shirtType,              //The type of shirt the NFT 
+    bling: bling                       //The type of bling the NFT 
+  };
+  myNFTs.push(nft);
+}
+
+// Function to display all NFTs in the collection 
+function showNFTs() {
+  for (let i = 0; i < myNFTs.length; i++) {
+    console.log("NFT #"+(i + 1));
+    console.log("Name:" +(myNFTs[i].name));
+    console.log("Eye Color:" +(myNFTs[i].eyeColor));
+    console.log("Shirt Type:" +(myNFTs[i].shirtType));
+    console.log("Bling:" +(myNFTs[i].bling));
+    console.log("");
+  }
+}
+
+// Function to get the total number of NFTs in the collection
+function getTotalNFTs() {
+  console.log("Total NFTs:" +(myNFTs.length));
+}
+
+// Let's create some NFTs
+createNFT("Kishan", "Green", "Jacket", "Platinum chain");
+createNFT("Raj", "Brown", "Overshirt", "Diamond necklaces");
+createNFT("Kamal", "Black", "Shirt", "Gold chain");
+
+// Display all NFTs
+showNFTs();
+
+// Get the total number of NFTs
+getTotalNFTs();
